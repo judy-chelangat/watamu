@@ -13,14 +13,14 @@ navLinks.addEventListener("click", (e) => {
   navLinks.classList.remove("open");
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
-
+// scrolling animation
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
   duration: 1000,
 };
 
-ScrollReveal().reveal(".header__image img", {
+ScrollReveal().reveal(".header-image img", {
   ...scrollRevealOption,
   origin: "right",
 });
@@ -32,28 +32,28 @@ ScrollReveal().reveal(".header__content .section__description", {
   ...scrollRevealOption,
   delay: 1000,
 });
-ScrollReveal().reveal(".header__content .header__btn", {
+ScrollReveal().reveal(".header__content .header-btn-wrapper", {
   ...scrollRevealOption,
   delay: 1500,
 });
-
-ScrollReveal().reveal(".explore__image img", {
+// exploresection animation
+ScrollReveal().reveal(".explore-image img", {
   ...scrollRevealOption,
   origin: "left",
 });
-ScrollReveal().reveal(".explore__content .section__header", {
+ScrollReveal().reveal(".explore-content .section-title", {
   ...scrollRevealOption,
   delay: 500,
 });
-ScrollReveal().reveal(".explore__content .section__description", {
+ScrollReveal().reveal(".explore-content .section-description", {
   ...scrollRevealOption,
   delay: 1000,
 });
-ScrollReveal().reveal(".explore__content .explore__btn", {
+ScrollReveal().reveal(".explore-content .explore-btn-wrapper", {
   ...scrollRevealOption,
   delay: 1500,
 });
-
+// dishes section 
 ScrollReveal().reveal(".banner__card", {
   ...scrollRevealOption,
   interval: 500,
@@ -83,4 +83,23 @@ const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
   },
+});
+// contact form 
+const contactLink = document.getElementById("contact-link");
+const contactModal = document.getElementById("contact-modal");
+const closeForm = document.getElementById("close-form");
+
+contactLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  contactModal.style.display = "block";
+});
+
+closeForm.addEventListener("click", () => {
+  contactModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === contactModal) {
+    contactModal.style.display = "none";
+  }
 });

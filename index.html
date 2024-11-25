@@ -29,12 +29,31 @@
         <li><a href="#special">Special</a></li>
         <li><a href="#chef">Chef</a></li>
         <li><a href="#client">Clients</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#" id="contact-link">Contact Us</a></li>
       </ul>
       <div class="nav__btn">
         <button class="btn"><i class="ri-shopping-bag-fill"></i></button>
       </div>
     </nav>
+    <!-- contact form -->
+    <div class="modal" id="contact-modal">
+      <div class="content">
+        <span class="form-close" id="close-form">&times;</span>
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Type in your Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit" class="primary-btn">Send</button>
+        </form>
+      </div>
+    </div>
     <!-- header-section -->
     <header class="container header-section" id="home">
       <div class="header-image">
@@ -113,7 +132,7 @@
         </div>
       </div>
     </section>
-
+<!-- explore section -->
     <section class="container explore-section">
       <div class="explore-image">
         <img src="assets/explore.png" alt="explore" />
@@ -132,182 +151,177 @@
         </div>
       </div>
     </section>
-<!-- zeki part -->
-    <section class="section__container banner__container">
-      <div class="banner__card">
-        <span class="banner__icon"><i class="ri-bowl-fill"></i></span>
-        <h4>Order Your Food</h4>
-        <p>
-          Seamlessly place your food orders online with just a few clicks. Enjoy
-          convenience and efficiency as you select from our diverse menu of
-          delectable dishes.
-        </p>
-        <a href="#">
-          Read more
-          <span><i class="ri-arrow-right-line"></i></span>
-        </a>
-      </div>
-      <div class="banner__card">
-        <span class="banner__icon"><i class="ri-truck-fill"></i></span>
-        <h4>Pick Your Food</h4>
-        <p>
-          Customize your dining experience by choosing from a tantalizing array
-          of options. For savory, sweet, or in between craving, find the perfect
-          meal to satisfy your appetite.
-        </p>
-        <a href="#">
-          Read more
-          <span><i class="ri-arrow-right-line"></i></span>
-        </a>
-      </div>
-      <div class="banner__card">
-        <span class="banner__icon"><i class="ri-star-smile-fill"></i></span>
-        <h4>Enjoy Your Food</h4>
-        <p>
-          Sit back, relax, and savor the flavors as your meticulously prepared
-          meal arrives. Delight in the deliciousness of every bite, knowing that
-          your satisfaction is our top priority.
-        </p>
-        <a href="#">
-          Read more
-          <span><i class="ri-arrow-right-line"></i></span>
-        </a>
-      </div>
-    </section>
-
-    <section class="chef" id="chef">
-      <img src="assets/topping.png" alt="topping" class="chef__bg" />
-      <div class="section__container chef__container">
-        <div class="chef__image">
-          <img src="assets/chefs.png" alt="chef" />
-        </div>
-        <div class="chef__content">
-          <h2 class="section__header">Cooked By The Best Chefs In The World</h2>
-          <p class="section__description">
-            Experience culinary excellence crafted by master chefs from around
-            the globe. Our team of culinary virtuosos brings together expertise,
-            innovation, and passion to create unforgettable dining experiences
-            that redefine gastronomy.
-          </p>
-          <ul class="chef__list">
-            <li>
-              <span><i class="ri-checkbox-fill"></i></span>
-              Savour culinary brilliance from master chefs worldwide.
-            </li>
-            <li>
-              <span><i class="ri-checkbox-fill"></i></span>
-              Experience innovative creations with attention to detail.
-            </li>
-            <li>
-              <span><i class="ri-checkbox-fill"></i></span>
-              Enjoy dishes crafted with an unwavering passion for perfection.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section__container client__container" id="client">
-      <h2 class="section__header">What Our Customers Are Saying</h2>
+<!-- banner section -->
+<section class="section__container banner__container">
+  <div class="banner__card">
+    <span class="banner__icon"><i class="ri-bowl-fill"></i></span>
+    <h4>Order Your Food</h4>
+    <p>
+      Seamlessly place your food orders online with just a few clicks. Enjoy
+      convenience and efficiency as you select from our diverse menu of
+      delectable dishes.
+    </p>
+    <a href="#">
+      Read more
+      <span><i class="ri-arrow-right-line"></i></span>
+    </a>
+  </div>
+  <div class="banner__card">
+    <span class="banner__icon"><i class="ri-truck-fill"></i></span>
+    <h4>Pick Your Food</h4>
+    <p>
+      Customize your dining experience by choosing from a tantalizing array
+      of options. For savory, sweet, or in between craving, find the perfect
+      meal to satisfy your appetite.
+    </p>
+    <a href="#">
+      Read more
+      <span><i class="ri-arrow-right-line"></i></span>
+    </a>
+  </div>
+  <div class="banner__card">
+    <span class="banner__icon"><i class="ri-star-smile-fill"></i></span>
+    <h4>Enjoy Your Food</h4>
+    <p>
+      Sit back, relax, and savor the flavors as your meticulously prepared
+      meal arrives. Delight in the deliciousness of every bite, knowing that
+      your satisfaction is our top priority.
+    </p>
+    <a href="#">
+      Read more
+      <span><i class="ri-arrow-right-line"></i></span>
+    </a>
+  </div>
+</section>
+<!-- chef part -->
+<section class="chef" id="chef">
+  <img src="assets/topping.png" alt="topping" class="chef__bg" />
+  <div class="section__container chef__container">
+    <div class="chef__image">
+      <img src="assets/chef.jpeg" alt="chef" />
+    </div>
+    <div class="chef__content">
+      <h2 class="section__header">Cooked By The Best Chefs In The World</h2>
       <p class="section__description">
-        Discover firsthand experiences and testimonials from our valued patrons.
-        Explore the feedback and reviews that showcase our commitment to
-        quality, service, and customer satisfaction.
+        Experience culinary excellence crafted by master chefs from around
+        the globe. Our team of culinary virtuosos brings together expertise,
+        innovation, and passion to create unforgettable dining experiences
+        that redefine gastronomy.
       </p>
-      <div class="client__swiper">
-        <!-- Slider main container -->
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="client__card">
-                <p>
-                  FoodMan's culinary expertise never fails to impress! Every
-                  dish is a masterpiece, bursting with flavor and freshness.
-                </p>
-                <img src="assets/client-1.jpg" alt="client" />
-                <h4>David Lee</h4>
-                <h5>Business Executive</h5>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="client__card">
-                <p>
-                  I always turn to FoodMan for a quick and delicious meal. Their
-                  efficient service and mouthwatering options never disappoint!
-                </p>
-                <img src="assets/client-2.jpg" alt="client" />
-                <h4>Emily Johnson</h4>
-                <h5>Food Blogger</h5>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="client__card">
-                <p>
-                  FoodMan has become my go-to for all my catering needs. Their
-                  attention to detail and exceptional customer service make
-                  every event a success.
-                </p>
-                <img src="assets/client-3.jpg" alt="client" />
-                <h4>Michael Thompson</h4>
-                <h5>Event Planner</h5>
-              </div>
-            </div>
+      <ul class="chef__list">
+        <li>
+          <span><i class="ri-checkbox-fill"></i></span>
+          Savour culinary brilliance from master chefs worldwide.
+        </li>
+        <li>
+          <span><i class="ri-checkbox-fill"></i></span>
+          Experience innovative creations with attention to detail.
+        </li>
+        <li>
+          <span><i class="ri-checkbox-fill"></i></span>
+          Enjoy dishes crafted with an unwavering passion for perfection.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- reviews section -->
+<section class="section__container client__container" id="client">
+  <h2 class="section__header">What Our Customers Are Saying</h2>
+  <p class="section__description">
+    Discover firsthand experiences and testimonials from our valued patrons.
+    Explore the feedback and reviews that showcase our commitment to
+    quality, service, and customer satisfaction.
+  </p>
+  <div class="client__swiper">
+    <!-- main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="client__card">
+            <p>
+              Watamu's culinary expertise never fails to impress! Every
+              dish is a masterpiece, bursting with flavor and freshness.
+            </p>
+            
+            <h4>Denis Ombachi</h4>
+            <h5>Business Executive</h5>
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
         </div>
-      </div>
-    </section>
-
-    <footer class="footer" id="contact">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <div class="logo footer__logo">
-            <a href="#">Food<span>man</span></a>
+        <div class="swiper-slide">
+          <div class="client__card">
+            <p>
+              I always turn to Watamu for a quick and delicious meal. Their
+              efficient service and mouthwatering options never disappoint!
+            </p>
+          
+            <h4>Marion Kangwana</h4>
+            <h5>Food Blogger</h5>
           </div>
-          <p class="section__description">
-            Embark on a gastronomic journey with FoodMan, where every bite tells
-            a story and every dish is crafted to perfection.
-          </p>
         </div>
-        <div class="footer__col">
-          <h4>Product</h4>
-          <ul class="footer__links">
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Specials</a></li>
-            <li><a href="#">Meal Deals</a></li>
-            <li><a href="#">Catering Options</a></li>
-            <li><a href="#">Seasonal Offerings</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Information</h4>
-          <ul class="footer__links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Nutrition Information</a></li>
-            <li><a href="#">Allergen Information</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Company</h4>
-          <ul class="footer__links">
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
+        <div class="swiper-slide">
+          <div class="client__card">
+            <p>
+              Watamu has become my go-to for all my catering needs. Their
+              attention to detail and exceptional customer service make
+              every event a success.
+            </p>
+            <h4>Antony Oduor</h4>
+            <h5>Event Planner</h5>
+          </div>
         </div>
       </div>
-      <div class="footer__bar">
-        Copyright © 2024 Web Design Mastery. All rights reserved.
-      </div>
-    </footer>
+      <!-- pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
-  </body>
+<footer class="footer" id="contact">
+  <div class="section__container footer__container">
+    <div class="footer__col">
+      <div class="logo footer__logo">
+        <a href="#">Wa<span>tamu</span></a>
+      </div>
+      <p class="section__description">
+        Embark on a gastronomic journey with Watamu, where every bite tells
+        a story and every dish is crafted to perfection.
+      </p>
+    </div>
+    <div class="footer__col">
+      <h4>Product</h4>
+      <ul class="footer__links">
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Specials</a></li>
+        <li><a href="#">Meal Deals</a></li>
+
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Information</h4>
+      <ul class="footer__links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <ul class="footer__links">
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bar">
+    Copyright &copy; 2024 Watamu. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+</body>
 </html>

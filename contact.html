@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="" class="form1">
+        <fieldset>
+            <legend> Send a message
+            </legend>
+            <h2 style="font-weight: bold;">Contact form</h2>
+            <label for="fname">First name:</label>&nbsp;
+            <input type="text" id="fname" class="input1" placeholder="enter a name"  required>
+            <br>
+            <br>
+            <label for="lname">Last  name:</label>&nbsp; 
+            <input type="text" id="lname"class="input1" placeholder="enter your last name"  required>
+            <br>
+            <br>
+            <fieldset>
+                <legend>gender</legend>
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" value="male"> male
+                <input type="radio" name="gender" value="female">female
+               </fieldset>
+            <fieldset>
+                <legend>Type in your message</legend>
+                <textarea name="" id="" cols="100" rows="10"></textarea></fieldset>
+                <button class="btn1" type="submit">Submit</button>
+        </fieldset>
+        <marquee behavior="alternate" direction="">Thank you for your message</marquee>
+    </form>
+</body>
+</html>
